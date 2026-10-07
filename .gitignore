@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+*.egg-info/
+dist/
+build/
+
+# 模型文件（较大，不上传到GitHub）
+models/*
+!models/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# 测试
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# 日志
+*.log
+
+# 临时文件
+*.tmp
+*.bak
+
+# uv
+.python-version
+uv.lock
+
+# 环境变量
+.env
+.env.local
+

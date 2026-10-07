@@ -1,0 +1,319 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+/* 头部 */
+header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* 主体内容 */
+main {
+    padding: 40px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.section-header h2 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+/* 输入区 */
+.input-section {
+    margin-bottom: 30px;
+}
+
+.example-select {
+    padding: 8px 15px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+#inputText {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 1rem;
+    resize: vertical;
+    transition: border-color 0.3s;
+}
+
+#inputText:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.text-hint {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.btn {
+    padding: 12px 30px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-secondary {
+    background: #e5e7eb;
+    color: #333;
+}
+
+.btn-secondary:hover {
+    background: #d1d5db;
+}
+
+/* 结果区 */
+.result-section {
+    margin-top: 30px;
+}
+
+.time-badge {
+    background: #10b981;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.highlighted-text {
+    background: #f9fafb;
+    padding: 25px;
+    border-radius: 8px;
+    line-height: 2;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    border: 2px solid #e5e7eb;
+}
+
+/* 实体高亮样式 */
+.entity-highlight {
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-weight: 500;
+    display: inline-block;
+    margin: 0 2px;
+}
+
+.entity-PER {
+    background-color: #fee2e2;
+    color: #991b1b;
+    border-bottom: 2px solid #ef4444;
+}
+
+.entity-LOC {
+    background-color: #dbeafe;
+    color: #1e40af;
+    border-bottom: 2px solid #3b82f6;
+}
+
+.entity-ORG {
+    background-color: #d1fae5;
+    color: #065f46;
+    border-bottom: 2px solid #10b981;
+}
+
+.entity-EDU {
+    background-color: #ede9fe;
+    color: #5b21b6;
+    border-bottom: 2px solid #8b5cf6;
+}
+
+.entity-PHONE {
+    background-color: #fef3c7;
+    color: #92400e;
+    border-bottom: 2px solid #f59e0b;
+}
+
+.entity-ID_CARD {
+    background-color: #fce7f3;
+    color: #9f1239;
+    border-bottom: 2px solid #ec4899;
+}
+
+.entity-EMAIL {
+    background-color: #cffafe;
+    color: #164e63;
+    border-bottom: 2px solid #06b6d4;
+}
+
+.entity-ADDRESS {
+    background-color: #ecfccb;
+    color: #365314;
+    border-bottom: 2px solid #84cc16;
+}
+
+.entity-URL {
+    background-color: #f3e8ff;
+    color: #6b21a8;
+    border-bottom: 2px solid #a855f7;
+}
+
+/* 表格样式 */
+.entities-table-wrapper {
+    margin-top: 20px;
+}
+
+.entities-table-wrapper h3 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.entities-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.entities-table th {
+    background: #f3f4f6;
+    padding: 12px;
+    text-align: left;
+    font-weight: 600;
+    color: #374151;
+}
+
+.entities-table td {
+    padding: 12px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.entities-table tbody tr:hover {
+    background: #f9fafb;
+}
+
+.entity-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* 加载状态 */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #667eea;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading-overlay p {
+    color: white;
+    margin-top: 20px;
+    font-size: 1.1rem;
+}
+
+/* 页脚 */
+footer {
+    background: #f9fafb;
+    padding: 20px;
+    text-align: center;
+    color: #6b7280;
+    border-top: 1px solid #e5e7eb;
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}

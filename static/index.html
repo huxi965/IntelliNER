@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IntelliNER - 中文智能实体识别</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎯 IntelliNER</h1>
+            <p class="subtitle">中文智能实体识别系统 · 支持识别：人名 · 地名 · 机构 · 大学 · 手机号 · 身份证 · 邮箱 · 地址 · 网址</p>
+        </header>
+
+        <main>
+            <!-- 输入区 -->
+            <section class="input-section">
+                <div class="section-header">
+                    <h2>📝 输入文本</h2>
+                    <select id="exampleSelect" class="example-select">
+                        <option value="">选择示例文本...</option>
+                    </select>
+                </div>
+                <textarea
+                    id="inputText"
+                    placeholder="请输入要识别的文本（建议400字以内），例如：马云在杭州创立了阿里巴巴集团，后来在浙江大学发表演讲..."
+                    rows="6"
+                    maxlength="500"
+                ></textarea>
+                <p class="text-hint">💡 提示：文本长度建议在400字以内，超长部分将自动截断</p>
+                <div class="button-group">
+                    <button id="predictBtn" class="btn btn-primary">🚀 开始识别</button>
+                    <button id="clearBtn" class="btn btn-secondary">🔄 清空</button>
+                </div>
+            </section>
+
+            <!-- 结果展示区 -->
+            <section class="result-section" id="resultSection" style="display: none;">
+                <div class="section-header">
+                    <h2>✨ 识别结果</h2>
+                    <span id="processingTime" class="time-badge"></span>
+                </div>
+
+                <!-- 高亮文本 -->
+                <div class="highlighted-text" id="highlightedText"></div>
+
+                <!-- 实体表格 -->
+                <div class="entities-table-wrapper">
+                    <h3>📊 实体列表</h3>
+                    <table class="entities-table" id="entitiesTable">
+                        <thead>
+                            <tr>
+                                <th>实体文本</th>
+                                <th>类型</th>
+                                <th>位置</th>
+                                <th>置信度</th>
+                            </tr>
+                        </thead>
+                        <tbody id="entitiesTableBody">
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- 加载状态 -->
+            <div id="loadingOverlay" class="loading-overlay" style="display: none;">
+                <div class="spinner"></div>
+                <p>正在识别中...</p>
+            </div>
+        </main>
+
+        <footer>
+            <p>🔬 基于 ModelScope + FastAPI 构建 | IntelliNER v1.0.0</p>
+        </footer>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
